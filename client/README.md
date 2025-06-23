@@ -1,12 +1,31 @@
-# React + Vite
+# Client (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The client folder contains the source code for the frontend of the IELTS Master application. Built with React, this part of the project provides the user interface where users can input their text and view AI-generated responses. The frontend communicates with the backend server via HTTP requests. To get started, install the dependencies and run the development server as described below. All UI components, assets, and related logic are organized within this folder.
 
-Currently, two official plugins are available:
+## How to Run
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Open a terminal and navigate to the `client` folder:
+    ```bash
+    cd client
+    ```
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
+3. Start the development server:
+    ```bash
+    npm start
+    ```
+4. Open [http://localhost:5173](http://localhost:5173) in your browser.
 
-## Expanding the ESLint configuration
+## Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- `src/` — Main source code for the React app.
+- `App.jsx` — Main application component.
+- Other components and assets as needed.
+
+## How it Works
+
+- The frontend provides a user interface to interact with the backend API.
+- When a user submits text, it sends a POST request to the backend `/gemini` endpoint.
+- The AI’s response is displayed in the UI.
